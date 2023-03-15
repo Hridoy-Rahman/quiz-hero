@@ -42,7 +42,6 @@ startQuiz.addEventListener("click", () => {
     counterNum--;
   }, 1000);
 });
-
 // All quiz data fetched from json
 const loadQuiz = async () => {
   const res = await fetch("./data/quiz.json");
@@ -60,7 +59,7 @@ const displayQuiz = (data) => {
   }
 
   data.forEach((quiz, i) => {
-    console.log(quiz)
+    // console.log(quiz)
     quizContainer.innerHTML += `<div class="m-3 py-3 px-4 shadow-sm rounded">
   <div class="flex items-center">
     <div class="h-8 w-8 bg-green-300 rounded-full flex justify-center items-center text-green-800 mr-3">
@@ -77,7 +76,7 @@ const displayQuiz = (data) => {
 
 // EventListener for quiz submit button
 document.querySelector("#submit").addEventListener("click",()=>{
-  console.log(answers)
+  // console.log(answers)
   if (answers.length < 6) {
     return;
   }
